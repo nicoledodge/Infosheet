@@ -1,50 +1,72 @@
-import logo from './logo.svg';
 import './App.css';
-import {useState} from "react";
+// import {useState} from "react";
+import {BrowserRouter as Router, Routes, Link, Route} from "react-router-dom";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-
-
+import Login from "./components/login.component";
+import SignUp from "./components/signup.component";
 
 function App() {
-  const [ cookies, setCookieCount ] = useState('');
+    // const [cookies, setCookieCount] = useState('');
 
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    return (
+        <div className="App">
+            <Router>
+                <div className="App">
+                    <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+                        <div className="container">
+                            <Link className="navbar-brand" to={"/sign-in"}>RemoteStack</Link>
+                            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                <ul className="navbar-nav ml-auto">
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to={"/sign-in"}>Sign in</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
 
-        <input
-            type="text" onInput={(e)=> setCookieCount(e.target.value)}/>
+                    <div className="outer">
+                        <div className="inner">
 
-        <button type="submit" onClick={(e)=> {
+                            {/*<Route exact path='/' element={<Login/>} />*/}
+                            <Routes>
+                                <Route path="/" element={<SignUp/>} />
+                                {/*<Route path="/sign-up" element={<SignUp/>} />*/}
+                            </Routes>
+                            {/*<Route exact path='/' component={Login} />*/}
+                            {/*<Route path="/sign-in" component={Login} />*/}
+                            {/*<Route path="/sign-up" component={SignUp} />*/}
 
-          console.log(cookies);
-          console.log(`https://swapi.dev/api/people/?search=${cookies}`);
+                        </div>
+                    </div>
+                </div>
+            </Router>
+            {/*<img src={logo} className="App-logo" alt="logo"/>*/}
 
-          fetch(`https://swapi.dev/api/people/?search=${cookies}`)
-              .then(response => response.json())
-              .then(data => {
-                console.log(data);
-              })
+            {/*<input*/}
+            {/*    type="text" onInput={(e) => setCookieCount(e.target.value)}/>*/}
 
-        }}>
-          Search
-        </button>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            {/*<button type="submit" onClick={(e) => {*/}
+
+            {/*    console.log(cookies);*/}
+            {/*    console.log(`https://frontend-take-home.fetchrewards.com/form/occupations`);*/}
+
+            {/*    fetch(`https://frontend-take-home.fetchrewards.com/form${cookies}`)*/}
+            {/*        .then(response => response.json())*/}
+            {/*        .then(data => {*/}
+            {/*            console.log(data);*/}
+            {/*        })*/}
+
+            {/*}}>*/}
+            {/*    Search*/}
+            {/*</button>*/}
+        </div>
+    );
 }
 
 export default App;
