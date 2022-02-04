@@ -1,6 +1,6 @@
 # Basic User Creation Form made with React and Axios
 
-![Demo](/Users/nicoledodge/Desktop/ReactApps/demodemo/public/Screen Shot 2022-02-04 at 4.47.22 PM.png)
+![Demo](https://github.com/nicoledodge/Infosheet/blob/master/public/Screen%20Shot%202022-02-04%20at%204.47.22%20PM.png?raw=true)
 
 ## Installation
 Clone down the repo.  
