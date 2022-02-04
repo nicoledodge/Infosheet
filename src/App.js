@@ -56,7 +56,7 @@ function App() {
             {/*    console.log(cookies);*/}
             {/*    console.log(`https://frontend-take-home.fetchrewards.com/form/occupations`);*/}
 
-            {/*    fetch(`https://frontend-take-home.fetchrewards.com/form${cookies}`)*/}
+            {/*    fetch(`https://frontend-take-home.fetchrewards.com/form/occupations`)*/}
             {/*        .then(response => response.json())*/}
             {/*        .then(data => {*/}
             {/*            console.log(data);*/}
