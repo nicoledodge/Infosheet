@@ -60,8 +60,6 @@ export default class Form extends Component {
 
     handleChange = (name, value) => {
         this.setState({[name]: value});
-        console.log(name, value)
-
     }
 
     handleSubmit = event => {
