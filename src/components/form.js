@@ -59,7 +59,7 @@ export default class Form extends Component {
     }
 
     handleChange = (name, value) => {
-        this.setState({ [name]: value });
+        this.setState({[name]: value});
         console.log(name, value)
 
     }
@@ -74,7 +74,7 @@ export default class Form extends Component {
             occupation: this.state.occupation,
             state: this.state.state,
         };
-        axios.post(`https://frontend-take-home.fetchrewards.com/form`, data )
+        axios.post(`https://frontend-take-home.fetchrewards.com/form`, data)
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -139,7 +139,8 @@ export default class Form extends Component {
                             onChange={(e) => this.handleChange("state", e.value)}/>
                 </div>
 
-                <button type="submit" onSubmit={this.handleSubmit} className="btn btn-dark btn-lg btn-block">Submit</button>
+                <button type="submit" onSubmit={this.handleSubmit} className="btn btn-dark btn-lg btn-block">Submit
+                </button>
 
             </form>
         );
